@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		240D854EE1A6A145A964C627 /* Pods_iosTestApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8037FAE3D23A0415FE26FB /* Pods_iosTestApp1.framework */; };
+		9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375A5A027CEFB1C000DFE28 /* LoginViewController.swift */; };
+		9375A5A327CEFB1C000DFE28 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */; };
+		9375A5A527CF1C19000DFE28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */; };
+		9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375A5A827CF3B07000DFE28 /* MainViewController.swift */; };
+		9375A5AB27CF3B07000DFE28 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A927CF3B07000DFE28 /* MainViewController.xib */; };
 		F221EB2627CA1EDE0036722C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F221EB2527CA1EDE0036722C /* Colors.xcassets */; };
 		F221EB2827CA2B340036722C /* Graphic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F221EB2727CA2B340036722C /* Graphic.xcassets */; };
 		F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F221EB2927CA2BA70036722C /* SplashViewController.swift */; };
@@ -45,6 +50,12 @@
 		1C6B233F2B987E9193351788 /* Pods_iosTestApp1_iosTestApp1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosTestApp1_iosTestApp1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2323E55078F2DBDC7CF890AE /* Pods-iosTestApp1-iosTestApp1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTestApp1-iosTestApp1UITests.release.xcconfig"; path = "Target Support Files/Pods-iosTestApp1-iosTestApp1UITests/Pods-iosTestApp1-iosTestApp1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C702DFCB436598ED9C75A89 /* Pods-iosTestApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTestApp1.release.xcconfig"; path = "Target Support Files/Pods-iosTestApp1/Pods-iosTestApp1.release.xcconfig"; sourceTree = "<group>"; };
+		9375A5A027CEFB1C000DFE28 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+		9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9375A5A827CF3B07000DFE28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9375A5A927CF3B07000DFE28 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DE8C40EC96F7B8693CF055FB /* Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig"; path = "Target Support Files/Pods-iosTestApp1-iosTestApp1UITests/Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F221EB1F27CA1EB60036722C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F221EB2027CA1EB60036722C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -106,6 +117,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9375A5A727CF3AE4000DFE28 /* 300_Main */ = {
+			isa = PBXGroup;
+			children = (
+				9375A5A827CF3B07000DFE28 /* MainViewController.swift */,
+				9375A5A927CF3B07000DFE28 /* MainViewController.xib */,
+			);
+			path = 300_Main;
+			sourceTree = "<group>";
+		};
 		DEEB3ECA70A455C75C127DB9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +149,8 @@
 		F221EB1B27C9EF390036722C /* 202_Login */ = {
 			isa = PBXGroup;
 			children = (
+				9375A5A027CEFB1C000DFE28 /* LoginViewController.swift */,
+				9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */,
 			);
 			path = 202_Login;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 		F233562E27C919B300FF1DD6 = {
 			isa = PBXGroup;
 			children = (
+				9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */,
 				F233563927C919B300FF1DD6 /* iosTestApp1 */,
 				F233563827C919B300FF1DD6 /* Products */,
 				DEEB3ECA70A455C75C127DB9 /* Pods */,
@@ -228,7 +251,9 @@
 				F221EB1C27C9EF490036722C /* 203_Join */,
 				F221EB1B27C9EF390036722C /* 202_Login */,
 				F221EB1A27C9EEEC0036722C /* 201_Splash */,
+				9375A5A727CF3AE4000DFE28 /* 300_Main */,
 				F233563A27C919B300FF1DD6 /* AppDelegate.swift */,
+				9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */,
 			);
 			path = iosTestApp1;
 			sourceTree = "<group>";
@@ -304,9 +329,12 @@
 			files = (
 				F233564727C919B300FF1DD6 /* LaunchScreen.storyboard in Resources */,
 				F221EB2C27CA2BA70036722C /* SplashViewController.xib in Resources */,
+				9375A5A327CEFB1C000DFE28 /* LoginViewController.xib in Resources */,
+				9375A5AB27CF3B07000DFE28 /* MainViewController.xib in Resources */,
 				F221EB2627CA1EDE0036722C /* Colors.xcassets in Resources */,
 				F233564427C919B300FF1DD6 /* Assets.xcassets in Resources */,
 				F221EB2827CA2B340036722C /* Graphic.xcassets in Resources */,
+				9375A5A527CF1C19000DFE28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F221EB5827CA459A0036722C /* Util_UINavigationController.swift in Sources */,
+				9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */,
 				F233563B27C919B300FF1DD6 /* AppDelegate.swift in Sources */,
 				F221EB5227CA459A0036722C /* Util_UIApplication.swift in Sources */,
 				F221EB3827CA456E0036722C /* Util_String.swift in Sources */,
@@ -372,6 +401,7 @@
 				F221EB5B27CA459A0036722C /* Util_Bool.swift in Sources */,
 				F221EB4D27CA459A0036722C /* Util_UITextField.swift in Sources */,
 				F221EB5927CA459A0036722C /* Util_UITableViewCell.swift in Sources */,
+				9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */,
 				F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */,
 				F221EB3127CA2D3C0036722C /* Util_Log.swift in Sources */,
 				F221EB2E27CA2C390036722C /* BaseViewController.swift in Sources */,

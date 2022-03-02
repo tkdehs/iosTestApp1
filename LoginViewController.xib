@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Bold.otf">
+            <string>NotoSansKR-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="iosTestApp1" customModuleProvider="target">
+            <connections>
+                <outlet property="lbTitle" destination="aHB-Hv-Xzy" id="8ye-30-AFW"/>
+                <outlet property="tfEmail" destination="dFO-Cr-mFE" id="DIG-S5-hHp"/>
+                <outlet property="tfPw" destination="Xaa-is-QRh" id="gpA-Ho-JI8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j30-UR-LJZ">
+                    <rect key="frame" x="0.0" y="403" width="414" height="90"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN4-fQ-rkS">
+                            <rect key="frame" x="20" y="10" width="52" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="dPD-C2-c0Q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdJ-Wo-EO0">
+                            <rect key="frame" x="20" y="50" width="69.5" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="lN5-rf-vIe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-Cr-mFE">
+                            <rect key="frame" x="109.5" y="8" width="284.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-is-QRh">
+                            <rect key="frame" x="109.5" y="48" width="284.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dFO-Cr-mFE" secondAttribute="trailing" constant="20" id="3PY-6k-R7d"/>
+                        <constraint firstItem="cdJ-Wo-EO0" firstAttribute="leading" secondItem="j30-UR-LJZ" secondAttribute="leading" constant="20" id="9p2-yJ-bjD"/>
+                        <constraint firstItem="Xaa-is-QRh" firstAttribute="centerY" secondItem="cdJ-Wo-EO0" secondAttribute="centerY" id="A4T-le-wgI"/>
+                        <constraint firstItem="Xaa-is-QRh" firstAttribute="width" secondItem="dFO-Cr-mFE" secondAttribute="width" id="Me9-h3-W8K"/>
+                        <constraint firstItem="dFO-Cr-mFE" firstAttribute="leading" secondItem="cdJ-Wo-EO0" secondAttribute="trailing" constant="20" id="QYQ-jG-uz3"/>
+                        <constraint firstItem="hN4-fQ-rkS" firstAttribute="top" secondItem="j30-UR-LJZ" secondAttribute="top" constant="10" id="UHa-o1-sI7"/>
+                        <constraint firstItem="cdJ-Wo-EO0" firstAttribute="top" secondItem="hN4-fQ-rkS" secondAttribute="bottom" constant="10" id="bXL-45-y2t"/>
+                        <constraint firstItem="hN4-fQ-rkS" firstAttribute="leading" secondItem="j30-UR-LJZ" secondAttribute="leading" constant="20" id="h17-WN-C73"/>
+                        <constraint firstAttribute="bottom" secondItem="cdJ-Wo-EO0" secondAttribute="bottom" constant="10" id="j9j-Xc-l5r"/>
+                        <constraint firstAttribute="trailing" secondItem="Xaa-is-QRh" secondAttribute="trailing" constant="20" id="q7q-TL-lx0"/>
+                        <constraint firstItem="dFO-Cr-mFE" firstAttribute="centerY" secondItem="hN4-fQ-rkS" secondAttribute="centerY" id="suf-ik-hLF"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHB-Hv-Xzy">
+                    <rect key="frame" x="121" y="318" width="172" height="35"/>
+                    <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLJ-Bw-DDT">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <color key="backgroundColor" name="HMT_DoderBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Maa-p4-zT8"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" name="White"/>
+                    </state>
+                    <connections>
+                        <action selector="loginButtonPressed:" destination="-1" eventType="touchUpInside" id="qyc-9a-iKX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uLJ-Bw-DDT" secondAttribute="bottom" id="BJz-Jm-ShP"/>
+                <constraint firstItem="aHB-Hv-Xzy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="BPk-WX-zoF"/>
+                <constraint firstItem="j30-UR-LJZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OMA-BX-I4x"/>
+                <constraint firstItem="j30-UR-LJZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YAE-Ez-dVD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j30-UR-LJZ" secondAttribute="trailing" id="eed-jX-5ZA"/>
+                <constraint firstItem="uLJ-Bw-DDT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f93-cV-1ya"/>
+                <constraint firstItem="j30-UR-LJZ" firstAttribute="top" secondItem="aHB-Hv-Xzy" secondAttribute="bottom" constant="50" id="hiK-4m-vst"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uLJ-Bw-DDT" secondAttribute="trailing" id="nAf-rU-bsd"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="140"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="HMT_DoderBlue">
+            <color red="0.0" green="0.50199997425079346" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

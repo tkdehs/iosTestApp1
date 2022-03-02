@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
@@ -15,15 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var navigationController:UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         /*
          UIApplication
          위 함수는 또한 앱의 런 루프를 포함하는 메인 이벤트 루프를 구성합니다.
          */
         DLog("application in test")
+        let ncLogin = UINavigationController.init(rootViewController: LoginViewController())
+        ncLogin.isNavigationBarHidden = true
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = SplashViewController()
+        self.window?.rootViewController = ncLogin
         self.window?.makeKeyAndVisible()
         self.setApplication(application)
+        
         
         return true
     }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="iosTestApp1" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="youtubePlayer" destination="HJz-5E-coe" id="gxg-p0-HoE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-mh-XFm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePG-E0-88j">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="chevron.backward" catalog="system">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="baseBackButtonPressed:" destination="-1" eventType="touchUpInside" id="KRh-cS-0mn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ePG-E0-88j" secondAttribute="bottom" id="6uI-5x-1f7"/>
+                        <constraint firstItem="ePG-E0-88j" firstAttribute="width" secondItem="Vfj-mh-XFm" secondAttribute="height" id="ZKK-fO-SKm"/>
+                        <constraint firstItem="ePG-E0-88j" firstAttribute="top" secondItem="Vfj-mh-XFm" secondAttribute="top" id="e6s-9b-yHQ"/>
+                        <constraint firstAttribute="height" constant="50" id="p04-sf-tb5"/>
+                        <constraint firstItem="ePG-E0-88j" firstAttribute="leading" secondItem="Vfj-mh-XFm" secondAttribute="leading" id="w9r-qY-aoq"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8u-Y8-REg">
+                    <rect key="frame" x="168" y="397" width="79" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="URL 재생"/>
+                    <connections>
+                        <action selector="urlVideoButtonPressed:" destination="-1" eventType="touchUpInside" id="qTG-Uc-19n"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJz-5E-coe" customClass="WKYTPlayerView">
+                    <rect key="frame" x="0.0" y="94" width="414" height="207"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Vfj-mh-XFm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Uc-gL-RVZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HJz-5E-coe" secondAttribute="trailing" id="6W2-y2-Gf2"/>
+                <constraint firstItem="HJz-5E-coe" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="8cj-vR-A1C"/>
+                <constraint firstItem="HJz-5E-coe" firstAttribute="top" secondItem="Vfj-mh-XFm" secondAttribute="bottom" id="NCy-ZQ-ics"/>
+                <constraint firstItem="Vfj-mh-XFm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="blE-6O-Hij"/>
+                <constraint firstItem="HJz-5E-coe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qvm-ct-h6F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vfj-mh-XFm" secondAttribute="trailing" id="tDh-JK-22x"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

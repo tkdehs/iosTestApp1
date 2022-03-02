@@ -38,9 +38,19 @@ target 'iosTestApp1' do
   # https://github.com/airbnb/lottie-ios
   ############################################################
   
+  ############################################################
+  ######################### Firebase POD #####################
   
-  target 'iosTestApp1UITests' do
-    # Pods for testin
-  end
-
+  pod 'Firebase/Auth'
+  
+  pod 'Firebase/Analytics'
+  
+  pod 'Firebase/Messaging'
+  
+  ############################################################
+  ################### youtube ################################
+  
+  pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
+  
+  ############################################################
 end
