@@ -6,56 +6,33 @@
 //
 
 import UIKit
-import AVKit
-import YoutubePlayer_in_WKWebView
 
-class MainViewController: BaseViewController {
-    
-    /////////////////////////
-    /// 트래킹용 스크린 네임 세팅
-    override var strScreenName : String? { get { return "메인"} set(strNew) { super.strScreenName = strNew } }
-    static var strScreenName : String? = "메인"
-    /////////////////////////
-    
-    @IBOutlet weak var youtubePlayer: WKYTPlayerView!
+class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.initView()
-        self.initData()
-    }
-    
-    //============================================================
-    // MARK: - View Setting
-    //============================================================
-    
-    /// 뷰 초기 세팅
-    func initView() {
+        view.backgroundColor = .lightGray
         
-    }
-    
-    //============================================================
-    // MARK: - Data Setting
-    //============================================================
-    
-    /// 데이터 초기 세팅
-    func initData() {
+        let vc1 = UINavigationController(rootViewController: HomeViewController())
+        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
+        let vc3 = UINavigationController(rootViewController: SearchViewController())
+        let vc4 = UINavigationController(rootViewController: DownloadsViewController())
         
-    }
-    
-
-    //============================================================
-    // MARK: - Button Action
-    //============================================================
-    
-    /// url 재생
-    /// - Parameter sender: 버튼 컨트롤
-    @IBAction func urlVideoButtonPressed(_ sender: UIButton) {
-        DLog("[USER_ACTION] urlVideoButtonPressed")
+        vc1.tabBarItem.image = UIImage(systemName: "house")
+        vc2.tabBarItem.image = UIImage(systemName: "play.circle")
+        vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        vc4.tabBarItem.image = UIImage(systemName: "arrow.down.to.line")
         
-        let playVarsDic = ["playsinline": 1]
-    https://youtu.be/jK7b8pgUElQ
-        youtubePlayer.load(withPlaylistId: "jK7b8pgUElQ", playerVars: playVarsDic)
+        
+        vc1.title = "Home"
+        vc2.title = "Coming Soon"
+        vc3.title = "TopSearch"
+        vc4.title = "Downloads"
+        
+        tabBar.tintColor = .label
+        
+        setViewControllers([vc1,vc2,vc3,vc4], animated: true)
     }
+    
 }

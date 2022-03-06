@@ -10,7 +10,6 @@
 		240D854EE1A6A145A964C627 /* Pods_iosTestApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8037FAE3D23A0415FE26FB /* Pods_iosTestApp1.framework */; };
 		9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375A5A027CEFB1C000DFE28 /* LoginViewController.swift */; };
 		9375A5A327CEFB1C000DFE28 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */; };
-		9375A5A527CF1C19000DFE28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */; };
 		9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375A5A827CF3B07000DFE28 /* MainViewController.swift */; };
 		9375A5AB27CF3B07000DFE28 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A927CF3B07000DFE28 /* MainViewController.xib */; };
 		F221EB2627CA1EDE0036722C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F221EB2527CA1EDE0036722C /* Colors.xcassets */; };
@@ -42,6 +41,13 @@
 		F233563B27C919B300FF1DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233563A27C919B300FF1DD6 /* AppDelegate.swift */; };
 		F233564427C919B300FF1DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F233564327C919B300FF1DD6 /* Assets.xcassets */; };
 		F233564727C919B300FF1DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F233564527C919B300FF1DD6 /* LaunchScreen.storyboard */; };
+		F26AE38A27D1D21D0016E57A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38927D1D21D0016E57A /* HomeViewController.swift */; };
+		F26AE38C27D1D22D0016E57A /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */; };
+		F26AE38E27D1D2340016E57A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38D27D1D2340016E57A /* SearchViewController.swift */; };
+		F26AE39027D1D23F0016E57A /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38F27D1D23F0016E57A /* DownloadsViewController.swift */; };
+		F26AE39527D1F1F50016E57A /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE39427D1F1F50016E57A /* CollectionViewTableViewCell.swift */; };
+		F26AE39727D205F00016E57A /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE39627D205F00016E57A /* HeroHeaderUIView.swift */; };
+		F2F4B7D727D06CE6000CF7D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +58,6 @@
 		2C702DFCB436598ED9C75A89 /* Pods-iosTestApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTestApp1.release.xcconfig"; path = "Target Support Files/Pods-iosTestApp1/Pods-iosTestApp1.release.xcconfig"; sourceTree = "<group>"; };
 		9375A5A027CEFB1C000DFE28 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = SOURCE_ROOT; };
-		9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9375A5A827CF3B07000DFE28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9375A5A927CF3B07000DFE28 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +99,12 @@
 		F233564327C919B300FF1DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F233564627C919B300FF1DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F233564827C919B300FF1DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26AE38927D1D21D0016E57A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		F26AE38D27D1D2340016E57A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F26AE38F27D1D23F0016E57A /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		F26AE39427D1F1F50016E57A /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		F26AE39627D205F00016E57A /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +131,10 @@
 		9375A5A727CF3AE4000DFE28 /* 300_Main */ = {
 			isa = PBXGroup;
 			children = (
+				F26AE39327D1E1480016E57A /* VeiwModels */,
+				F26AE39227D1E1420016E57A /* Views */,
+				F26AE39127D1E1390016E57A /* Models */,
+				F26AE38827D1D1F50016E57A /* Controllers */,
 				9375A5A827CF3B07000DFE28 /* MainViewController.swift */,
 				9375A5A927CF3B07000DFE28 /* MainViewController.xib */,
 			);
@@ -170,6 +185,7 @@
 				F221EB2527CA1EDE0036722C /* Colors.xcassets */,
 				F233564827C919B300FF1DD6 /* Info.plist */,
 				F221EB2727CA2B340036722C /* Graphic.xcassets */,
+				9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */,
 			);
 			path = 101_Resource;
 			sourceTree = "<group>";
@@ -226,7 +242,6 @@
 		F233562E27C919B300FF1DD6 = {
 			isa = PBXGroup;
 			children = (
-				9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */,
 				F233563927C919B300FF1DD6 /* iosTestApp1 */,
 				F233563827C919B300FF1DD6 /* Products */,
 				DEEB3ECA70A455C75C127DB9 /* Pods */,
@@ -253,7 +268,6 @@
 				F221EB1A27C9EEEC0036722C /* 201_Splash */,
 				9375A5A727CF3AE4000DFE28 /* 300_Main */,
 				F233563A27C919B300FF1DD6 /* AppDelegate.swift */,
-				9375A5A427CF1C19000DFE28 /* GoogleService-Info.plist */,
 			);
 			path = iosTestApp1;
 			sourceTree = "<group>";
@@ -265,6 +279,40 @@
 				F221EB2D27CA2C390036722C /* BaseViewController.swift */,
 			);
 			path = 100_Base;
+			sourceTree = "<group>";
+		};
+		F26AE38827D1D1F50016E57A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F26AE38927D1D21D0016E57A /* HomeViewController.swift */,
+				F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */,
+				F26AE38D27D1D2340016E57A /* SearchViewController.swift */,
+				F26AE38F27D1D23F0016E57A /* DownloadsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F26AE39127D1E1390016E57A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F26AE39227D1E1420016E57A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F26AE39427D1F1F50016E57A /* CollectionViewTableViewCell.swift */,
+				F26AE39627D205F00016E57A /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F26AE39327D1E1480016E57A /* VeiwModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VeiwModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F4B7D727D06CE6000CF7D3 /* GoogleService-Info.plist in Resources */,
 				F233564727C919B300FF1DD6 /* LaunchScreen.storyboard in Resources */,
 				F221EB2C27CA2BA70036722C /* SplashViewController.xib in Resources */,
 				9375A5A327CEFB1C000DFE28 /* LoginViewController.xib in Resources */,
@@ -334,7 +383,6 @@
 				F221EB2627CA1EDE0036722C /* Colors.xcassets in Resources */,
 				F233564427C919B300FF1DD6 /* Assets.xcassets in Resources */,
 				F221EB2827CA2B340036722C /* Graphic.xcassets in Resources */,
-				9375A5A527CF1C19000DFE28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F221EB5827CA459A0036722C /* Util_UINavigationController.swift in Sources */,
+				F26AE39727D205F00016E57A /* HeroHeaderUIView.swift in Sources */,
 				9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */,
 				F233563B27C919B300FF1DD6 /* AppDelegate.swift in Sources */,
 				F221EB5227CA459A0036722C /* Util_UIApplication.swift in Sources */,
@@ -399,12 +448,16 @@
 				F221EB5727CA459A0036722C /* Util_NSObject.swift in Sources */,
 				F221EB4B27CA459A0036722C /* Util_UITextView.swift in Sources */,
 				F221EB5B27CA459A0036722C /* Util_Bool.swift in Sources */,
+				F26AE38C27D1D22D0016E57A /* UpcomingViewController.swift in Sources */,
 				F221EB4D27CA459A0036722C /* Util_UITextField.swift in Sources */,
 				F221EB5927CA459A0036722C /* Util_UITableViewCell.swift in Sources */,
+				F26AE38A27D1D21D0016E57A /* HomeViewController.swift in Sources */,
 				9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */,
 				F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */,
+				F26AE39527D1F1F50016E57A /* CollectionViewTableViewCell.swift in Sources */,
 				F221EB3127CA2D3C0036722C /* Util_Log.swift in Sources */,
 				F221EB2E27CA2C390036722C /* BaseViewController.swift in Sources */,
+				F26AE39027D1D23F0016E57A /* DownloadsViewController.swift in Sources */,
 				F221EB5127CA459A0036722C /* Util_UIButton.swift in Sources */,
 				F221EB4F27CA459A0036722C /* Util_Int.swift in Sources */,
 				F221EB5C27CA459A0036722C /* Util_UIView.swift in Sources */,
@@ -413,6 +466,7 @@
 				F221EB5E27CA47530036722C /* Util.swift in Sources */,
 				F221EB5627CA459A0036722C /* Util_NSMutableAttributedString.swift in Sources */,
 				F221EB3327CA33920036722C /* Define.swift in Sources */,
+				F26AE38E27D1D2340016E57A /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
