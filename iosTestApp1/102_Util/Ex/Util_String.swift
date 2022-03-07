@@ -292,6 +292,10 @@ extension String {
         return nCount
     }
     
+    func capitalizeFirstLetter() -> String {
+        return self.prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
 }
 
 extension String.Encoding {

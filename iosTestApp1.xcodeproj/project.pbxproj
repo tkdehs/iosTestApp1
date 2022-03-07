@@ -12,6 +12,9 @@
 		9375A5A327CEFB1C000DFE28 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A127CEFB1C000DFE28 /* LoginViewController.xib */; };
 		9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375A5A827CF3B07000DFE28 /* MainViewController.swift */; };
 		9375A5AB27CF3B07000DFE28 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9375A5A927CF3B07000DFE28 /* MainViewController.xib */; };
+		93E88F4227D5A6A70015720E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E88F4127D5A6A70015720E /* APICaller.swift */; };
+		93E88F4427D5B17B0015720E /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E88F4327D5B17B0015720E /* Title.swift */; };
+		93E88F4827D5DA3D0015720E /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E88F4727D5DA3D0015720E /* TitleCollectionViewCell.swift */; };
 		F221EB2627CA1EDE0036722C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F221EB2527CA1EDE0036722C /* Colors.xcassets */; };
 		F221EB2827CA2B340036722C /* Graphic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F221EB2727CA2B340036722C /* Graphic.xcassets */; };
 		F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F221EB2927CA2BA70036722C /* SplashViewController.swift */; };
@@ -61,6 +64,9 @@
 		9375A5A627CF314A000DFE28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9375A5A827CF3B07000DFE28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9375A5A927CF3B07000DFE28 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		93E88F4127D5A6A70015720E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		93E88F4327D5B17B0015720E /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Title.swift; path = iosTestApp1/300_Main/Managers/Title.swift; sourceTree = SOURCE_ROOT; };
+		93E88F4727D5DA3D0015720E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE8C40EC96F7B8693CF055FB /* Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig"; path = "Target Support Files/Pods-iosTestApp1-iosTestApp1UITests/Pods-iosTestApp1-iosTestApp1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F221EB1F27CA1EB60036722C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F221EB2027CA1EB60036722C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 		9375A5A727CF3AE4000DFE28 /* 300_Main */ = {
 			isa = PBXGroup;
 			children = (
+				93E88F4027D5A68F0015720E /* Managers */,
 				F26AE39327D1E1480016E57A /* VeiwModels */,
 				F26AE39227D1E1420016E57A /* Views */,
 				F26AE39127D1E1390016E57A /* Models */,
@@ -139,6 +146,14 @@
 				9375A5A927CF3B07000DFE28 /* MainViewController.xib */,
 			);
 			path = 300_Main;
+			sourceTree = "<group>";
+		};
+		93E88F4027D5A68F0015720E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				93E88F4127D5A6A70015720E /* APICaller.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		DEEB3ECA70A455C75C127DB9 /* Pods */ = {
@@ -295,6 +310,7 @@
 		F26AE39127D1E1390016E57A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93E88F4327D5B17B0015720E /* Title.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +320,7 @@
 			children = (
 				F26AE39427D1F1F50016E57A /* CollectionViewTableViewCell.swift */,
 				F26AE39627D205F00016E57A /* HeroHeaderUIView.swift */,
+				93E88F4727D5DA3D0015720E /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,6 +459,7 @@
 				F221EB5227CA459A0036722C /* Util_UIApplication.swift in Sources */,
 				F221EB3827CA456E0036722C /* Util_String.swift in Sources */,
 				F221EB5A27CA459A0036722C /* Util_UILabel.swift in Sources */,
+				93E88F4827D5DA3D0015720E /* TitleCollectionViewCell.swift in Sources */,
 				F221EB5527CA459A0036722C /* Util_CGFloat.swift in Sources */,
 				F221EB4C27CA459A0036722C /* Util_UIImageView.swift in Sources */,
 				F221EB5327CA459A0036722C /* Util_Date.swift in Sources */,
@@ -451,9 +469,11 @@
 				F26AE38C27D1D22D0016E57A /* UpcomingViewController.swift in Sources */,
 				F221EB4D27CA459A0036722C /* Util_UITextField.swift in Sources */,
 				F221EB5927CA459A0036722C /* Util_UITableViewCell.swift in Sources */,
+				93E88F4427D5B17B0015720E /* Title.swift in Sources */,
 				F26AE38A27D1D21D0016E57A /* HomeViewController.swift in Sources */,
 				9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */,
 				F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */,
+				93E88F4227D5A6A70015720E /* APICaller.swift in Sources */,
 				F26AE39527D1F1F50016E57A /* CollectionViewTableViewCell.swift in Sources */,
 				F221EB3127CA2D3C0036722C /* Util_Log.swift in Sources */,
 				F221EB2E27CA2C390036722C /* BaseViewController.swift in Sources */,
