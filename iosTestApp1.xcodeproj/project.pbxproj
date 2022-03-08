@@ -44,6 +44,10 @@
 		F233563B27C919B300FF1DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233563A27C919B300FF1DD6 /* AppDelegate.swift */; };
 		F233564427C919B300FF1DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F233564327C919B300FF1DD6 /* Assets.xcassets */; };
 		F233564727C919B300FF1DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F233564527C919B300FF1DD6 /* LaunchScreen.storyboard */; };
+		F268FA6127D6EF7C008E16B8 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268FA6027D6EF7C008E16B8 /* TitleTableViewCell.swift */; };
+		F268FA6327D6F48E008E16B8 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268FA6227D6F48E008E16B8 /* TitleViewModel.swift */; };
+		F268FA6527D712A4008E16B8 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268FA6427D712A4008E16B8 /* SearchResultsViewController.swift */; };
+		F268FA6927D74C76008E16B8 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268FA6827D74C76008E16B8 /* YoutubeSearchResponse.swift */; };
 		F26AE38A27D1D21D0016E57A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38927D1D21D0016E57A /* HomeViewController.swift */; };
 		F26AE38C27D1D22D0016E57A /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */; };
 		F26AE38E27D1D2340016E57A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26AE38D27D1D2340016E57A /* SearchViewController.swift */; };
@@ -105,6 +109,10 @@
 		F233564327C919B300FF1DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F233564627C919B300FF1DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F233564827C919B300FF1DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F268FA6027D6EF7C008E16B8 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		F268FA6227D6F48E008E16B8 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		F268FA6427D712A4008E16B8 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		F268FA6827D74C76008E16B8 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 		F26AE38927D1D21D0016E57A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		F26AE38D27D1D2340016E57A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -296,13 +304,30 @@
 			path = 100_Base;
 			sourceTree = "<group>";
 		};
-		F26AE38827D1D1F50016E57A /* Controllers */ = {
+		F268FA6627D712CA008E16B8 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				F26AE38927D1D21D0016E57A /* HomeViewController.swift */,
+				F268FA6427D712A4008E16B8 /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		F268FA6727D712D3008E16B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				F26AE38B27D1D22D0016E57A /* UpcomingViewController.swift */,
 				F26AE38D27D1D2340016E57A /* SearchViewController.swift */,
 				F26AE38F27D1D23F0016E57A /* DownloadsViewController.swift */,
+				F26AE38927D1D21D0016E57A /* HomeViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F26AE38827D1D1F50016E57A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F268FA6627D712CA008E16B8 /* General */,
+				F268FA6727D712D3008E16B8 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				93E88F4327D5B17B0015720E /* Title.swift */,
+				F268FA6827D74C76008E16B8 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,6 +347,7 @@
 				F26AE39427D1F1F50016E57A /* CollectionViewTableViewCell.swift */,
 				F26AE39627D205F00016E57A /* HeroHeaderUIView.swift */,
 				93E88F4727D5DA3D0015720E /* TitleCollectionViewCell.swift */,
+				F268FA6027D6EF7C008E16B8 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +355,7 @@
 		F26AE39327D1E1480016E57A /* VeiwModels */ = {
 			isa = PBXGroup;
 			children = (
+				F268FA6227D6F48E008E16B8 /* TitleViewModel.swift */,
 			);
 			path = VeiwModels;
 			sourceTree = "<group>";
@@ -454,6 +482,7 @@
 			files = (
 				F221EB5827CA459A0036722C /* Util_UINavigationController.swift in Sources */,
 				F26AE39727D205F00016E57A /* HeroHeaderUIView.swift in Sources */,
+				F268FA6327D6F48E008E16B8 /* TitleViewModel.swift in Sources */,
 				9375A5AA27CF3B07000DFE28 /* MainViewController.swift in Sources */,
 				F233563B27C919B300FF1DD6 /* AppDelegate.swift in Sources */,
 				F221EB5227CA459A0036722C /* Util_UIApplication.swift in Sources */,
@@ -468,9 +497,11 @@
 				F221EB5B27CA459A0036722C /* Util_Bool.swift in Sources */,
 				F26AE38C27D1D22D0016E57A /* UpcomingViewController.swift in Sources */,
 				F221EB4D27CA459A0036722C /* Util_UITextField.swift in Sources */,
+				F268FA6127D6EF7C008E16B8 /* TitleTableViewCell.swift in Sources */,
 				F221EB5927CA459A0036722C /* Util_UITableViewCell.swift in Sources */,
 				93E88F4427D5B17B0015720E /* Title.swift in Sources */,
 				F26AE38A27D1D21D0016E57A /* HomeViewController.swift in Sources */,
+				F268FA6927D74C76008E16B8 /* YoutubeSearchResponse.swift in Sources */,
 				9375A5A227CEFB1C000DFE28 /* LoginViewController.swift in Sources */,
 				F221EB2B27CA2BA70036722C /* SplashViewController.swift in Sources */,
 				93E88F4227D5A6A70015720E /* APICaller.swift in Sources */,
@@ -481,6 +512,7 @@
 				F221EB5127CA459A0036722C /* Util_UIButton.swift in Sources */,
 				F221EB4F27CA459A0036722C /* Util_Int.swift in Sources */,
 				F221EB5C27CA459A0036722C /* Util_UIView.swift in Sources */,
+				F268FA6527D712A4008E16B8 /* SearchResultsViewController.swift in Sources */,
 				F221EB5027CA459A0036722C /* Util_UIImage.swift in Sources */,
 				F221EB4E27CA459A0036722C /* Util_UIWindow.swift in Sources */,
 				F221EB5E27CA47530036722C /* Util.swift in Sources */,

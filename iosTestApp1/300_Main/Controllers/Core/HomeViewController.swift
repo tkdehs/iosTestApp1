@@ -39,7 +39,11 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         
+        APICaller.shared.getMovie(with: "herry"){ results in
+            
+        }
         configureNavbar()
+        
     }
     
     func configureNavbar(){
