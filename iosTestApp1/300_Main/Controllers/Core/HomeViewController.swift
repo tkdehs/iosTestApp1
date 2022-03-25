@@ -17,6 +17,9 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
+    private var randomTrendingMovie: Title?
+    private var headerView: HeroHeaderUIView?
+    
     let sectiontitles:[String] = ["Trending Movies" ,"Trending Tv" ,"Popular", "Upcoming Movies", "Top rated"]
 
     private let homeFeedTable: UITableView = {
@@ -35,15 +38,26 @@ class HomeViewController: UIViewController {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView?.delegate = self
         homeFeedTable.tableHeaderView = headerView
-        
-        
-        APICaller.shared.getMovie(with: "herry"){ results in
-            
-        }
+        confiureHeroHeaderView()
         configureNavbar()
         
+    }
+    
+    private func confiureHeroHeaderView(){
+        APICaller.shared.getTrendingTvs { [weak self] result in
+            switch result {
+            case .success(let titles):
+                guard let selectedTitle = titles.randomElement() else {return}
+
+                self?.randomTrendingMovie = selectedTitle
+                self?.headerView?.configure(with: selectedTitle)
+            case .failure(let error):
+                DLog(error.localizedDescription)
+            }
+        }
     }
     
     func configureNavbar(){
@@ -79,6 +93,7 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
+        cell.delegate = self
         switch indexPath.section {
         case Sections.TrendingMovies.rawValue:
             APICaller.shared.getTrendingMovies { results in
@@ -158,5 +173,23 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource {
         // 올릴떄는 같이 올라가고
         // 내려갈 때 맨위라면 땅겨지지 않도록
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension HomeViewController: HeroHeaderUIViewDelegate {
+    func heroHeaderUIViewPlayTarget(model: TitlePreviewViewModel) {
+        let vc = TitlePreviewViewController()
+        vc.configure(with: model)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

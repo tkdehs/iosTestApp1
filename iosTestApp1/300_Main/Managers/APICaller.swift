@@ -25,7 +25,9 @@ class APICaller {
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void){
         let url = "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.API_KEY)"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -34,13 +36,16 @@ class APICaller {
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
+            
         }
     }
     
     func getTrendingTvs(completion: @escaping (Result<[Title], Error>) -> Void) {
         let url = "\(Constants.baseURL)/3/trending/tv/day?api_key=\(Constants.API_KEY)"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -49,13 +54,16 @@ class APICaller {
             } catch {
                 completion(.failure(APIError.failedTogetData))
             }
+            
         }
     }
     
     func getUpcomingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         let url = "\(Constants.baseURL)/3/movie/upcoming?api_key=\(Constants.API_KEY)&language=ko-KR&page=1"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -70,7 +78,9 @@ class APICaller {
     func getPopular(completion: @escaping (Result<[Title], Error>) -> Void) {
         let url = "\(Constants.baseURL)/3/movie/popular?api_key=\(Constants.API_KEY)&language=ko-KR&page=1"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -86,6 +96,7 @@ class APICaller {
         let url = "\(Constants.baseURL)/3/movie/top_rated?api_key=\(Constants.API_KEY)&language=ko-KR&page=1"
         
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -100,7 +111,9 @@ class APICaller {
     func getDiscoverMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         let url = "\(Constants.baseURL)/3/discover/movie?api_key=\(Constants.API_KEY)&language=ok-KR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -117,7 +130,9 @@ class APICaller {
         
         let url = "\(Constants.baseURL)/3/search/movie?api_key=\(Constants.API_KEY)&query=\(query)"
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
@@ -129,17 +144,20 @@ class APICaller {
         }
     }
     
-    func getMovie(with query: String, completion: @escaping (Result<[VideoElement], Error>) -> Void) {
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
         
         guard let url = URL(string: "\(Constants.YoutubeBaseUrl)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else {return}
         
+        Util.shard.showProgress()
         AF.request(url, method: .get, parameters: [:], encoding: URLEncoding.queryString).responseData { responseData in
+            Util.shard.dismissProgress()
             guard let data = responseData.data, responseData.error == nil else {return}
             do {
                 let results = try JSONDecoder().decode(YoutubeSearchResults.self, from: data)
-                completion(.success(results.items))
+                completion(.success(results.items[0]))
             } catch {
+                completion(.failure(error))
                 DLog(error.localizedDescription)
             }
         }

@@ -20,4 +20,5 @@ struct Title: Codable {
     let vote_count: Int
     let vote_average: Double
     let release_date: String?
+    let overview: String?
 }

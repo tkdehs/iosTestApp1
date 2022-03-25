@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct TitlePreviewModel {
-    
+struct TitlePreviewViewModel {
+    let titleOrgData: Title?
+    let title: String
+    let youtuveView: VideoElement
+    let titleOverview: String
 }
